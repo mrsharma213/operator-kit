@@ -1,0 +1,58 @@
+{
+  "$schema": "https://openclaw.nik.co/install.schema.json",
+  "name": "operator-kit",
+  "version": "1.0.0",
+  "description": "Starter kit for making an OpenClaw agent operate with real discipline.",
+  "repo": "https://github.com/mrsharma213/operator-kit",
+  "license": "MIT",
+  "instructions": {
+    "for_human": "Run `curl -sSL https://openclaw.nik.co/install.sh | bash` OR tell your agent to follow the `for_agent` instructions in this JSON.",
+    "for_agent": [
+      "Create these directories in the OpenClaw workspace root (e.g., ~/.openclaw/workspace/): memory/, brain/people/, brain/companies/, brain/originals/, projects/.",
+      "For each file in the `files` array below: fetch its `url`, save it to the workspace at `dest_path`. If a file already exists at `dest_path`, preserve it and save the new version as `<dest_path>.new` for manual review.",
+      "After installation, remind the human to fill in SOUL.md and USER.md with their own identity and preferences, then read MANUAL.md.",
+      "Add a note to the daily memory file: 'Installed Operator Kit from openclaw.nik.co on <date>.'"
+    ]
+  },
+  "files": [
+    {
+      "url": "https://openclaw.nik.co/MANUAL.md",
+      "dest_path": "MANUAL.md",
+      "purpose": "The Agent Operating Manual. Memory, reasoning, discipline, communication, tools."
+    },
+    {
+      "url": "https://openclaw.nik.co/templates/SOUL.md",
+      "dest_path": "SOUL.md",
+      "purpose": "Agent identity + voice. Human fills in."
+    },
+    {
+      "url": "https://openclaw.nik.co/templates/USER.md",
+      "dest_path": "USER.md",
+      "purpose": "Who the human is + communication prefs. Human fills in."
+    },
+    {
+      "url": "https://openclaw.nik.co/templates/AGENTS.md",
+      "dest_path": "AGENTS.md",
+      "purpose": "Session-start conventions and red lines."
+    },
+    {
+      "url": "https://openclaw.nik.co/templates/MEMORY.md",
+      "dest_path": "MEMORY.md",
+      "purpose": "Long-term curated memory with iron-law structure."
+    },
+    {
+      "url": "https://openclaw.nik.co/templates/HEARTBEAT.md",
+      "dest_path": "HEARTBEAT.md",
+      "purpose": "Periodic-check routines if the agent runs heartbeats."
+    },
+    {
+      "url": "https://openclaw.nik.co/templates/TOOLS.md",
+      "dest_path": "TOOLS.md",
+      "purpose": "Local cheat sheet for setup-specific notes."
+    }
+  ],
+  "post_install": {
+    "message": "Operator Kit installed. Fill in SOUL.md and USER.md next, then read MANUAL.md.",
+    "docs": "https://openclaw.nik.co"
+  }
+}
