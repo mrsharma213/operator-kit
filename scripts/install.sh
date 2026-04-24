@@ -94,16 +94,23 @@ Learn mode install complete. Everything landed in:
 Nothing at your workspace root was modified. Your existing files are exactly where
 you left them.
 
-Next step — tell your agent:
+Next step — tell your agent to read BOTH files fully before proposing anything:
 
-  Read operator-kit/MANUAL.md. Identify patterns worth adopting into our existing
-  setup. Propose specific edits to our SOUL.md / USER.md / AGENTS.md / MEMORY.md
-  before making any changes. Do not rewrite what we have — only suggest incremental
-  improvements with my approval.
+  Read operator-kit/MANUAL.md (the 3,000-word operating manual) AND
+  operator-kit/LIFE-SKILLS.md (the 15,652-word / 322-lesson practical layer) end
+  to end. Do not skim. The bulk of the operator patterns are in LIFE-SKILLS.md
+  across 25 categories: memory, reasoning, shipping, communication, trust,
+  discipline, investigation, taste, config, mindset, CRM, DNS, cron, voice,
+  transcripts, newsletter ops, research, sub-agents, dashboards, security, fleet
+  management, calendar, outbound routing, incident response, session hygiene.
 
-That way the agent reads the manual, compares it against your real workspace,
-and surfaces specific patterns (iron-law formatting, brain/ folder, verify-before-
-done, etc.) you can adopt one at a time.
+  Once you have read both fully: identify every pattern our existing setup does
+  not already implement. Propose specific edits to our SOUL.md / USER.md /
+  AGENTS.md / MEMORY.md one pattern at a time. Do not rewrite what we have.
+  Only suggest incremental improvements with my approval.
+
+IMPORTANT: if your agent only reads the manual and skips the lessons file, it
+will surface maybe 10 percent of the available patterns. Make sure it reads both.
 
 Repo:  https://github.com/mrsharma213/operator-kit
 Docs:  https://openclaw.nik.co
@@ -112,6 +119,7 @@ EOF
 
   additive)
     # Same as learn, plus scaffold a couple of optional directories.
+    
     mkdir -p "${KIT_DIR}" "${DEST}/memory" "${DEST}/brain/people" "${DEST}/brain/companies" "${DEST}/brain/originals" "${DEST}/memory/archive"
     echo "Installing reference materials into ${KIT_DIR}/ and creating optional directories..."
     fetch_into "/MANUAL.md"                 "${KIT_DIR}/MANUAL.md"           "MANUAL.md"
@@ -134,8 +142,14 @@ What was created:
   ${DEST}/brain/companies/              (optional per-company knowledge pages)
   ${DEST}/brain/originals/              (optional verbatim quotes / frameworks)
 
-Nothing at the workspace root was modified. Your SOUL.md, USER.md, AGENTS.md,
-MEMORY.md, HEARTBEAT.md, TOOLS.md are exactly as you left them.
+Nothing at the workspace root was modified.
+
+Next step — tell your agent to read BOTH files fully:
+
+  Read operator-kit/MANUAL.md AND operator-kit/LIFE-SKILLS.md end to end. The
+  manual is 3,000 words of philosophy; LIFE-SKILLS is 15,652 words with 322
+  concrete patterns across 25 categories. Read both, then propose specific
+  incremental edits to our existing files one pattern at a time.
 
 Repo:  https://github.com/mrsharma213/operator-kit
 Docs:  https://openclaw.nik.co
@@ -203,8 +217,14 @@ Next steps:
   1. Open SOUL.md and fill in your agent's identity.
   2. Open USER.md and fill in who you are.
   3. (Optional) Open TOOLS.md for your local aliases and shortcuts.
-  4. Read MANUAL.md at least once — it's the operating philosophy.
-  5. Tell your agent: "Read AGENTS.md and MANUAL.md and follow them."
+  4. Read MANUAL.md AND LIFE-SKILLS.md end to end, not just one.
+     - MANUAL.md is the 3,000-word philosophy layer
+     - LIFE-SKILLS.md is the 15,652-word / 322-lesson practical layer
+     - Both matter. Reading only one loses most of the value.
+  5. Tell your agent:
+     "Read AGENTS.md, MANUAL.md, and LIFE-SKILLS.md end to end before
+      proposing anything. Then identify patterns our setup does not already
+      implement across all 25 categories and surface them."
 
 Files saved as *.new indicate you already had your own. Diff them at your leisure.
 
