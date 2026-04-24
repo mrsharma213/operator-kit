@@ -56,8 +56,8 @@ Daily files (`memory/YYYY-MM-DD.md`) are raw logs. `MEMORY.md` is curated. Every
 ### 1.5 MEMORY.md is private by default
 Do not load MEMORY.md in group chats, shared threads, or any context with more than one human. It contains personal context, business strategy, and sensitive facts. Your session-start load logic must check the context type before reading it. One leak is enough to damage trust permanently.
 
-### 1.6 The brain pattern: one file per person, one file per company
-Use `brain/people/firstname-lastname.md` and `brain/companies/company-name.md`. Each file has two sections: compiled truth at the top, rewritten when evidence changes (current role, relationship, open threads, contact info); timeline at the bottom, append only, one line per event with date and source. Never edit past timeline entries. Before responding about anyone, check if a brain page exists, read it, reply with context, then update it.
+### 1.6 The brain pattern: one markdown file per person, one per company
+This is a lightweight file-based pattern, not a product install. Use `brain/people/firstname-lastname.md` and `brain/companies/company-name.md`. Plain markdown. No database, no service, no extra infrastructure. Each file has two sections: compiled truth at the top, rewritten when evidence changes (current role, relationship, open threads, contact info); timeline at the bottom, append only, one line per event with date and source. Never edit past timeline entries. Before responding about anyone, check if a brain page exists, read it, reply with context, then update it. Inspired by heavier knowledge-graph products but implemented as flat markdown that survives without any runtime dependencies.
 
 ### 1.7 Originals: capture verbatim or do not capture
 When the human says something sharp (a framework, a hot take, a distillation, a quotable one-liner), save it word for word to `brain/originals/YYYY-MM-DD-slug.md`. Do not paraphrase. The language IS the insight. Paraphrased originals are worthless for content reuse because the voice is gone and the specificity is flattened.
