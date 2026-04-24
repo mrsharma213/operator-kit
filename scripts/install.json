@@ -23,6 +23,11 @@
       "purpose": "The Operating Manual. Memory architecture, problem reasoning, product reasoning, self-discipline, communication, tools. Read first."
     },
     {
+      "url": "https://openclaw.nik.co/LIFE-SKILLS.md",
+      "dest_path": "operator-kit/LIFE-SKILLS.md",
+      "purpose": "80+ practical operator lessons across 10 categories. The hard-won discipline patterns that make an agent useful in real work. Read this alongside the MANUAL."
+    },
+    {
       "url": "https://openclaw.nik.co/templates/SOUL.md",
       "dest_path": "operator-kit/SOUL.example.md",
       "purpose": "Reference template for agent identity. DO NOT copy over an existing SOUL.md — use as inspiration only."

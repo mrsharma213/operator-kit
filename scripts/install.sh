@@ -79,6 +79,7 @@ case "$MODE" in
     mkdir -p "${KIT_DIR}"
     echo "Installing reference materials into ${KIT_DIR}/ ..."
     fetch_into "/MANUAL.md"                 "${KIT_DIR}/MANUAL.md"          "MANUAL.md (the operating manual)"
+    fetch_into "/LIFE-SKILLS.md"            "${KIT_DIR}/LIFE-SKILLS.md"     "LIFE-SKILLS.md (80+ operator lessons)"
     fetch_into "/templates/SOUL.md"         "${KIT_DIR}/SOUL.example.md"    "SOUL.example.md (reference template)"
     fetch_into "/templates/USER.md"         "${KIT_DIR}/USER.example.md"    "USER.example.md (reference template)"
     fetch_into "/templates/AGENTS.md"       "${KIT_DIR}/AGENTS.example.md"  "AGENTS.example.md (reference template)"
@@ -114,6 +115,7 @@ EOF
     mkdir -p "${KIT_DIR}" "${DEST}/memory" "${DEST}/brain/people" "${DEST}/brain/companies" "${DEST}/brain/originals" "${DEST}/memory/archive"
     echo "Installing reference materials into ${KIT_DIR}/ and creating optional directories..."
     fetch_into "/MANUAL.md"                 "${KIT_DIR}/MANUAL.md"           "MANUAL.md"
+    fetch_into "/LIFE-SKILLS.md"            "${KIT_DIR}/LIFE-SKILLS.md"      "LIFE-SKILLS.md"
     fetch_into "/templates/SOUL.md"         "${KIT_DIR}/SOUL.example.md"     "SOUL.example.md"
     fetch_into "/templates/USER.md"         "${KIT_DIR}/USER.example.md"     "USER.example.md"
     fetch_into "/templates/AGENTS.md"       "${KIT_DIR}/AGENTS.example.md"   "AGENTS.example.md"
@@ -149,6 +151,7 @@ EOF
 
     FILES=(
       "/MANUAL.md|MANUAL.md"
+      "/LIFE-SKILLS.md|LIFE-SKILLS.md"
       "/templates/SOUL.md|SOUL.md"
       "/templates/USER.md|USER.md"
       "/templates/AGENTS.md|AGENTS.md"

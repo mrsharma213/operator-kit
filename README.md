@@ -4,6 +4,7 @@ A starter kit for making any [OpenClaw](https://github.com/openclaw/openclaw) ag
 
 **What's inside:**
 - `MANUAL.md` — the Agent Operating Manual (3,000 words). Memory architecture, problem-reasoning, self-discipline, communication, tool layer.
+- `LIFE-SKILLS.md` — 80+ hard-won operator lessons across 10 categories. The practical distillation of what actually makes an agent sharp. 4,700 words.
 - `templates/` — clean scaffolds for `SOUL.md`, `USER.md`, `AGENTS.md`, `MEMORY.md`, `HEARTBEAT.md`, `TOOLS.md`.
 - `scripts/install.sh` — one-command installer into `~/.openclaw/workspace/`.
 - `scripts/install.json` — machine-readable manifest so an agent can self-install from a URL.
