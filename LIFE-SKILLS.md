@@ -960,7 +960,7 @@ At end of day, scan tomorrow's calendar for: overlaps, travel gaps, missing prep
 Event titles containing "hold" or "tentative" are not confirmed events. Do not prepare briefs for them unless they get confirmed. Do not flag conflicts with hold times.
 
 ### 22.10 Check both accounts, separately
-If the human uses multiple calendars (personal + work, jet + nik), check both. Conflicts span accounts constantly. A clean primary calendar does not mean a clean schedule.
+If the human uses multiple calendars (personal + work, or two separate work accounts), check both. Conflicts span accounts constantly. A clean primary calendar does not mean a clean schedule.
 
 ### 22.11 Recurring meetings decay
 Weekly recurrences set up months ago often outlive their usefulness. Every quarter, audit recurring meetings and surface "still valuable?" for each one. Do not just run them forever.
