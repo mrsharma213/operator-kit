@@ -1,58 +1,60 @@
 {
   "$schema": "https://openclaw.nik.co/install.schema.json",
   "name": "operator-kit",
-  "version": "1.0.0",
-  "description": "Starter kit for making an OpenClaw agent operate with real discipline.",
+  "version": "1.1.0",
+  "description": "Optional patterns, a 3000-word manual, and starter templates for OpenClaw agents. Read first — adopt what fits. Nothing is overwritten without your approval.",
   "repo": "https://github.com/mrsharma213/operator-kit",
   "license": "MIT",
+  "philosophy": "This kit is reference material, not a replacement for your existing workspace. Your agent already has its own SOUL, USER, AGENTS, and MEMORY files that reflect how you actually work. The kit lives in a separate /operator-kit/ subfolder so you can read the manual, cherry-pick patterns that are genuinely useful, and propose incremental edits to your real workspace. Nothing is rewritten silently.",
   "instructions": {
-    "for_human": "Run `curl -sSL https://openclaw.nik.co/install.sh | bash` OR tell your agent to follow the `for_agent` instructions in this JSON.",
+    "for_human": "Run 'curl -sSL https://openclaw.nik.co/install.sh | bash' for the safe default (read-only install into a /operator-kit/ subfolder). Existing workspace files are not touched. Then ask your agent to read the manual and propose individual patterns to adopt.",
     "for_agent": [
-      "Create these directories in the OpenClaw workspace root (e.g., ~/.openclaw/workspace/): memory/, brain/people/, brain/companies/, brain/originals/, projects/.",
-      "For each file in the `files` array below: fetch its `url`, save it to the workspace at `dest_path`. If a file already exists at `dest_path`, preserve it and save the new version as `<dest_path>.new` for manual review.",
-      "After installation, remind the human to fill in SOUL.md and USER.md with their own identity and preferences, then read MANUAL.md.",
-      "Add a note to the daily memory file: 'Installed Operator Kit from openclaw.nik.co on <date>.'"
+      "Only write files into a new 'operator-kit/' subfolder of the OpenClaw workspace root (e.g. ~/.openclaw/workspace/operator-kit/). Do NOT touch the workspace root SOUL.md, USER.md, AGENTS.md, MEMORY.md, HEARTBEAT.md, or TOOLS.md — those belong to the user and reflect their existing setup.",
+      "For each file in the `files` array below: fetch its `url`, save it to the `dest_path` shown (note the .example.md suffix on templates so they're clearly labeled as reference only).",
+      "After installation: read operator-kit/MANUAL.md end-to-end. Identify specific patterns the user's current workspace does NOT already implement (iron-law formatting in MEMORY.md, brain/ directories for people and companies, verify-before-declaring-done, archive-don't-delete, etc.).",
+      "Surface the list of potential additions to the user with a clear ask: which patterns would you like to adopt? Then propose targeted edits to their existing files — one pattern at a time — with the user's explicit approval before making any changes.",
+      "Never rewrite or replace the user's existing SOUL, USER, AGENTS, or MEMORY files. Always propose incremental edits, label assumptions, and get approval."
     ]
   },
   "files": [
     {
       "url": "https://openclaw.nik.co/MANUAL.md",
-      "dest_path": "MANUAL.md",
-      "purpose": "The Agent Operating Manual. Memory, reasoning, discipline, communication, tools."
+      "dest_path": "operator-kit/MANUAL.md",
+      "purpose": "The Operating Manual. Memory architecture, problem reasoning, product reasoning, self-discipline, communication, tools. Read first."
     },
     {
       "url": "https://openclaw.nik.co/templates/SOUL.md",
-      "dest_path": "SOUL.md",
-      "purpose": "Agent identity + voice. Human fills in."
+      "dest_path": "operator-kit/SOUL.example.md",
+      "purpose": "Reference template for agent identity. DO NOT copy over an existing SOUL.md — use as inspiration only."
     },
     {
       "url": "https://openclaw.nik.co/templates/USER.md",
-      "dest_path": "USER.md",
-      "purpose": "Who the human is + communication prefs. Human fills in."
+      "dest_path": "operator-kit/USER.example.md",
+      "purpose": "Reference template for human profile. DO NOT copy over an existing USER.md — use as inspiration only."
     },
     {
       "url": "https://openclaw.nik.co/templates/AGENTS.md",
-      "dest_path": "AGENTS.md",
-      "purpose": "Session-start conventions and red lines."
+      "dest_path": "operator-kit/AGENTS.example.md",
+      "purpose": "Reference template for session-start conventions. DO NOT copy over an existing AGENTS.md — use as inspiration only."
     },
     {
       "url": "https://openclaw.nik.co/templates/MEMORY.md",
-      "dest_path": "MEMORY.md",
-      "purpose": "Long-term curated memory with iron-law structure."
+      "dest_path": "operator-kit/MEMORY.example.md",
+      "purpose": "Reference template showing iron-law formatting and long-term memory structure. DO NOT copy over an existing MEMORY.md — propose incremental edits instead."
     },
     {
       "url": "https://openclaw.nik.co/templates/HEARTBEAT.md",
-      "dest_path": "HEARTBEAT.md",
-      "purpose": "Periodic-check routines if the agent runs heartbeats."
+      "dest_path": "operator-kit/HEARTBEAT.example.md",
+      "purpose": "Reference template for periodic-check routines. Optional."
     },
     {
       "url": "https://openclaw.nik.co/templates/TOOLS.md",
-      "dest_path": "TOOLS.md",
-      "purpose": "Local cheat sheet for setup-specific notes."
+      "dest_path": "operator-kit/TOOLS.example.md",
+      "purpose": "Reference template for local cheat-sheet notes. Optional."
     }
   ],
   "post_install": {
-    "message": "Operator Kit installed. Fill in SOUL.md and USER.md next, then read MANUAL.md.",
+    "message": "Operator Kit reference materials installed in operator-kit/. Nothing at the workspace root was modified. Read MANUAL.md, then propose individual patterns to adopt into your existing files with user approval.",
     "docs": "https://openclaw.nik.co"
   }
 }
